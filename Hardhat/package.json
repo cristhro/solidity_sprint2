@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "Alexander Herranz",
   "scripts": {
-    "compile": "hardhat compile",
+    "compile": "hardhat compile"
   },
   "devDependencies": {
     "@nomiclabs/buidler": "^1.4.8",
