@@ -17,7 +17,7 @@ contract Disney{
     // Constructor 
     constructor () public {
         token = new ERC20Basic(10000);
-        owner = msg.sender;
+        owner = payable(msg.sender);
     }
     
     // Estructura de datos para almacenar a los clientes de Disney
@@ -47,7 +47,7 @@ contract Disney{
         // Diferencia de lo que el cliente paga
         uint returnValue = msg.value - coste;
         // Disney retorna la cantidad de ethers al cliente
-        msg.sender.transfer(returnValue);
+        (payable(msg.sender)).transfer(returnValue);
         // Obtencion del numero de tokens disponibles
         uint Balance = balanceOf();
         require(_numTokens <= Balance, "Compra un numero menor de Tokens");
@@ -237,7 +237,7 @@ contract Disney{
         // El cliente devuelve los tokens 
          token.transferencia_disney(msg.sender, address(this),_numTokens);
          // Devolucion de los ethers al cliente 
-         msg.sender.transfer(PrecioTokens(_numTokens));
+         (payable(msg.sender)).transfer(PrecioTokens(_numTokens));
     }
     
 }
