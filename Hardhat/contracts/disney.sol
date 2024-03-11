@@ -15,7 +15,7 @@ contract Disney{
     address payable public owner;
     
     // Constructor 
-    constructor () public {
+    constructor () {
         token = new ERC20Basic(10000);
         owner = payable(msg.sender);
     }

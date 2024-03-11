@@ -32,7 +32,7 @@ contract ERC20Basic is IERC20 {
     
     using SafeMath for uint256;
     
-    constructor (uint256 total) public{
+    constructor (uint256 total) {
         totalSupply_ = total;
         balances[msg.sender] = totalSupply_;
     }
