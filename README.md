@@ -1,5 +1,9 @@
-# solidity_sprint_2
-Segunda practica de solidity, implementando funciones del contrato ERC 20
+# IEBS
+
+Sprint 2 - implementando funciones del contrato ERC 20
+- Grupo: 15
+- Cristhian Rodriguez Gomez
+- Jesus Rosas Rosales
 
 
 ## Configuración del entorno
