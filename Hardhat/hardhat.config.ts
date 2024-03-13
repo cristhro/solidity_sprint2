@@ -20,7 +20,7 @@ const chainIds = {
 const { //This variables must be in the .env file, in order to work (like .env.example)
   SIGNER_DIRECTOR_PRIVATE_KEY,
   SIGNER_STUDENT_PRIVATE_KEY,
-  SIGNER_TEACHER_PRIVATE_KEY,
+  SIGNER_SCHOOL_PRIVATE_KEY,
   ETH_SEPOLIA_TESTNET_RPC,
   ETH_SCAN_API_KEY,
 } = process.env;
@@ -50,10 +50,10 @@ const config: HardhatUserConfig = {
       chainId: chainIds.eth_sepolia_id,
       accounts: SIGNER_DIRECTOR_PRIVATE_KEY !== undefined ? [SIGNER_DIRECTOR_PRIVATE_KEY] : []
     },
-    ethereum_sepolia_testnet_as_teacher: {
+    ethereum_sepolia_testnet_as_school: {
       url: ETH_SEPOLIA_TESTNET_RPC,
       chainId: chainIds.eth_sepolia_id,
-      accounts: SIGNER_TEACHER_PRIVATE_KEY !== undefined ? [SIGNER_TEACHER_PRIVATE_KEY] : []
+      accounts: SIGNER_SCHOOL_PRIVATE_KEY !== undefined ? [SIGNER_SCHOOL_PRIVATE_KEY] : []
     },
   },
   etherscan: {
