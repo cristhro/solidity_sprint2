@@ -29,8 +29,8 @@ Resultado: dirección del contrato School token
 
 2. Verificar el contrato School Token
 ```sh
-  npm run school-grades:verify  0xaCeEb2ff9e8D571707a2Ec7cD8dE21Fb111BE229
-  -> Successfully verified contract SchoolGrades on Etherscan.
+  npm run school-token:verify  0xaCeEb2ff9e8D571707a2Ec7cD8dE21Fb111BE229
+  -> Successfully verified contract SchoolToken on Etherscan.
   https://sepolia.etherscan.io/address/0xaCeEb2ff9e8D571707a2Ec7cD8dE21Fb111BE229#code
 ```
 

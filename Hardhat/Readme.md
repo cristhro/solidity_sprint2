@@ -18,9 +18,9 @@ npx hardhat run ./scripts/deploySchoolGrades.ts --network ethereum_sepolia_testn
 npx hardhat verify --network ethereum_sepolia_testnet DEPLOYED_CONTRACT_ADDRESS
 ```
 
-#### Example with Goerli Network
+#### Example with Sepolia Network
 ```sh
 npx hardhat run ./scripts/deploy.ts --network ethereum_sepolia_testnet
-npx hardhat verify --network ethereum_goerli_testnet 0x...
+npx hardhat verify --network ethereum_sepolia_testnet 0x...
 
 ```
