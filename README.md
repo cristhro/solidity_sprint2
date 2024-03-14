@@ -8,10 +8,11 @@ Sprint 2 - implementando funciones del contrato ERC 20
 ## Intruducción
 En esta practica, usaremos un nuevo contrato SchoolToken para la gestion de tokens que se usara en el contrato SchoolCertificate, 
 ampliaremos la funcionalidad del contrato SchoolCertificate del sprint1 añadiendole la posibilidad de pagar con tokens (SchoolToken).
-SchoolToken
+
+### SchoolToken
 - La escuela podra otorgar estos tokens a los estudiantes (minando)
 - El estudiante podra consultar su balance
-SchoolCertificate
+### SchoolCertificate
 - El estudiante  podra Solicitar certificado (dando permiso para realizar tranferencias de los fondos al director una vez se apruebe el certificado)
 - El director firmara el certificado, acto seguido se hace la transferencia de la cuenta del estudiante a la cuenta del director
 
