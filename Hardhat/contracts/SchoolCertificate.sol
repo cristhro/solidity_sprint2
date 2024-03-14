@@ -9,7 +9,7 @@ contract SchoolCertificate {
     string studentName;
     string degree;
     uint year;
-    bool paid;
+    bool allowed;
     bool granted;
   }
 
@@ -37,13 +37,13 @@ contract SchoolCertificate {
     certificates[msg.sender] = CertificateInfo(_studentName, _degree, _year, false, false);
   }
 
-  // Función para que un estudiante pague un certificado
-  function payCertificate() public payable {
+  // Función para que el estudiante autorice el pago de un certificado al director de la escuela
+  function allowCertificate() public payable {
     require(msg.value == certificatePrice, "Debe enviar el precio correcto del certificado");
-    require(certificates[msg.sender].paid == false, "El certificado ya ha sido pagado");
+    require(certificates[msg.sender].allowed == false, "El certificado ya ha sido autorizado");
 
     // Marca el certificado como pagado
-    certificates[msg.sender].paid = true;
+    certificates[msg.sender].allowed = true;
 
     // Transfiere el pago al director
     schoolToken.approve(director, certificatePrice);
@@ -52,7 +52,7 @@ contract SchoolCertificate {
   // Función para que la escuela otorgue un certificado a un estudiante
   function grantCertificate(address _student) public {
     require(msg.sender == director, "Solo el director puede otorgar certificados");
-    require(certificates[_student].paid == true, "El estudiante debe pagar el certificado antes de que se le otorgue");
+    require(certificates[_student].allowed == true, "El estudiante debe pagar el certificado antes de que se le otorgue");
 
 
     // Marca el certificado como otorgado

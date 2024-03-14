@@ -39,13 +39,13 @@ contract SchoolToken is ERC20 {
   }
 
   // Función personalizada para que la escuela cree y envíe tokens a los estudiantes
-  function mintCertificate(address student, uint256 amount) public onlySchool {
+  function mintTokens(address student, uint256 amount) public onlySchool {
     _mint(student, amount);
   }
 
   // Modifier para restringir la función a la escuela
   modifier onlySchool() {
-    require(msg.sender == shoollAddress, "Only the school can mint certificates");
+    require(msg.sender == shoollAddress, "Only the school can mint tokens");
     _;
   }
 

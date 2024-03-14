@@ -7,9 +7,9 @@ async function main() {
   const schoolCertificateContract = await ethers.getContractAt('SchoolCertificate', SCHOOL_CERTIFICATE_CONTRACT_ADDRESS);
 
 
-  // Estudiante paga el titulo
-  // si ya ha pagado devuelve un error
-  const tx = await schoolCertificateContract.payCertificate({ value: 100 });
+  // Estudiante autoriza el titulo
+  // si ya ha autorizado devuelve un error
+  const tx = await schoolCertificateContract.allowCertificate({ value: 100 });
   await tx.wait();
 
   

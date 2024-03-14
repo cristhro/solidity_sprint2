@@ -1,7 +1,7 @@
 import { ethers } from "hardhat";
 import * as dotenv from "dotenv";
 dotenv.config();
-const { SCHOOL_CERTIFICATE_CONTRACT_ADDRESS, DIRECTOR_ADDRESS } = process.env;
+const { SCHOOL_CERTIFICATE_CONTRACT_ADDRESS } = process.env;
 
 
 async function main() {
